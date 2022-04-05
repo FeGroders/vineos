@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+    <form class="form" action="/login" method="post">
+        <div class="container">
+            <div class="input__div">
+                <label class="label" for="Usuario"><b>Username</b></label>
+                <input class="input" type="text" placeholder="Usuario" name="Usuario" required>
+            </div>
+            <div class="input__div">
+                <label class="label" for="senha"><b>Password</b></label>
+                <input class="input" type="password" placeholder="Senha" name="senha" required>
+            </div>
+            <input class="submit__button button is-primary is-light" type="submit" value="Login">
+        </div>
+    </form>
+</div>
+</body>
+
+</html>

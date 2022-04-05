@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Vinhos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="./">
+                    <p>
+                        <span>
+                            <wine_bar class="material-icons">wine_bar
+                        </span>
+                        Vineos
+                    </p>
+                </a>
+
+                <a role="button" class="navbar-burger mr-3" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                    <span class="material-icons">
+						shopping_cart
+					</span>
+                </a>
+            </div>
+
+            <div id="navbar-menu" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light mr-3" id="button_cart" class="js-modal-trigger" data-target="modal-cart">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                                Carrinho
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card__container">
+        </div>
+    </div>
+
+    <div class="modal" id="modal_cart"> 
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Carrinho de Compras</p>
+                <button class="delete" id="button_close_cart" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="cart__container">
+                    <!-- content -->
+                </div> 
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-warning" id="button_clear_cart">Limpar carrinho</button>
+            </footer>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            Developed by Fernando with ❤️
+        </div>
+    </footer>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

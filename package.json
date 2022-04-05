@@ -1,0 +1,28 @@
+{
+  "name": "vineos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeGroders/vineos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FeGroders/vineos/issues"
+  },
+  "homepage": "https://github.com/FeGroders/vineos#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

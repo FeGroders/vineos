@@ -1,0 +1,52 @@
+html {
+	width: 100vw;
+	height: 100vh;
+}
+header {
+	margin-bottom: 2.5rem;
+}
+footer {
+	/* position:absolute; */
+	bottom: 0;
+	width: 100%;
+	padding: 0.5rem !important;
+}
+
+.navbar-burger span {
+	background-color: white;
+}
+.card__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+.card {
+	min-height: 25rem;
+	min-width: 18.75rem;
+}
+.card:hover {
+	width: calc(18.75rem + 1.5%);
+	height: calc(25rem + 1%);
+}
+.card-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+}
+.add__cart {
+	outline: none;
+	border: none;
+	border-radius: 0.625rem;
+}
+.modal-card-head {
+	margin: 0;
+}
+#table_cart {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}

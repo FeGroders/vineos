@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <a class="return__link" href="/">Voltar</a>
+        <form class="form" action="/inserir" method="POST">
+            <div class="input__div">
+                <label class="label" for="name">Nome:</label>
+                <input class="input " type="text" id="name" name="name" />
+            </div>
+            <div class="input__div">
+                <label class="label" for="fone">Telefone:</label>
+                <input class="input" type="text" id="fone" name="fone" />
+            </div>
+            <div class="input__div">
+                <label class="label" for="address">Endereco:</label>
+                <input class="input" type="text" id="address" name="address" />
+            </div>
+            <input class="submit__button button is-primary is-light" type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+
+</html>
