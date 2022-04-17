@@ -24,7 +24,20 @@ app.get('/', (req, res) => {
 });
 
 app.post('/login', (req,res) => {
-
+	cliente.query(
+		`select * from usuarios where nome = '${req.body.usuario}' and senha = '${req.body.senha}' and admin = 'true';`,
+		(err, result) => {
+			if (err) {
+				res.status(500).send(err.message);
+			} else {
+				if (result.rows.length > 0) {
+					res.status(200).send(result.rows);
+				} else {
+					res.status(404).send('Usuário não encontrado');
+				}
+			}
+		}
+	);
 })
 
 app.get('/insertVinho.html', (req, res) => { 
@@ -33,7 +46,7 @@ app.get('/insertVinho.html', (req, res) => {
 
 app.get('/vinhos', (req, res) => {
 	let results = [];
-	cliente.query('select * from vinhos', (err, resp) => {
+	cliente.query('select * from vinhos where disponivel = true', (err, resp) => {
 		resp.rows.forEach((row) => {
 			results.push(row);
 		});

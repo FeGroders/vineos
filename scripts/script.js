@@ -1,8 +1,8 @@
 const table = document.querySelector('.card__container');
 const btnOpenCart = document.querySelector('#button_cart');
-const modal = document.querySelector('#modal_cart');
-const modalBtnClose = document.querySelector('#button_close_cart');
-const modalBtnClearCart = document.querySelector('#button_clear_cart');
+const modalCart = document.querySelector('#modal_cart');
+const modalCartBtnClose = document.querySelector('#button_close_cart');
+const modalCartBtnClearCart = document.querySelector('#button_clear_cart');
 const navbarBurger = document.querySelector('.navbar-burger')
 
 function loadWines(id, nome, descricao, ano, preco, imagem) {
@@ -147,21 +147,21 @@ function loadCart() {
 
 btnOpenCart.onclick = function () {
 	loadCart();
-	//Open modal
-	modal.classList.add('is-active');
+	//Open modalCart
+	modalCart.classList.add('is-active');
 };
 
 navbarBurger.onclick = function () {
 	loadCart();
-	//Open modal
-	modal.classList.add('is-active');
+	//Open modalCart
+	modalCart.classList.add('is-active');
 };
 
-modalBtnClose.onclick = function () {
-	modal.classList.remove('is-active');
+modalCartBtnClose.onclick = function () {
+	modalCart.classList.remove('is-active');
 };
 
-modalBtnClearCart.onclick = function () {
+modalCartBtnClearCart.onclick = function () {
 	clearShoppingCart();
-	modal.classList.remove('is-active');
+	modalCart.classList.remove('is-active');
 };

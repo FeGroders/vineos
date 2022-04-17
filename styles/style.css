@@ -1,4 +1,4 @@
-html {
+html, body {
 	width: 100vw;
 	height: 100vh;
 }
@@ -11,7 +11,9 @@ footer {
 	width: 100%;
 	padding: 0.5rem !important;
 }
-
+.container {
+	height: 100vh;
+}
 .navbar-burger span {
 	background-color: white;
 }
@@ -28,8 +30,8 @@ footer {
 	min-width: 18.75rem;
 }
 .card:hover {
-	width: calc(18.75rem + 1.5%);
-	height: calc(25rem + 1%);
+	width: calc(18.75rem + 0.5%);
+	height: calc(25rem + 0.5%);
 }
 .card-content {
 	display: flex;
