@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req,res) => {
 	cliente.query(
-		`select * from usuarios where nome = '${req.body.usuario}' and senha = '${req.body.senha}' and admin = 'true';`,
+		`select * from usuarios where email = '${req.body.email}' and senha = '${req.body.password}' and admin = true;`,
 		(err, result) => {
 			if (err) {
 				res.status(500).send(err.message);

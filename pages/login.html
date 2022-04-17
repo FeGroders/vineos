@@ -6,25 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Login</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="./">
+                    <p>
+                        <span>
+                            <wine_bar class="material-icons">wine_bar
+                        </span>
+                        Vineos
+                    </p>
+                </a>
+
+                <a role="button" class="navbar-burger mr-3" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                    <span class="material-icons">
+                        home
+                    </span>
+                </a>
+            </div>
+
+            <!-- <a href="./pages/login.html"></a> -->
+
+            <div id="navbar-menu" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light mr-3" id="button_home" class="js-modal-trigger" href="/">
+                                <span class="material-icons">
+                                    home
+                                </span>
+                                Homepage
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-    <form class="form" action="/login" method="post">
-        <div class="container">
-            <div class="input__div">
-                <label class="label" for="Usuario"><b>Username</b></label>
-                <input class="input" type="text" placeholder="Usuario" name="usuario" required>
+        <form class="form" action="/login" method="post">
+            <div class="container">
+                <div class="field">
+                    <p class="control has-icons-left">
+                    <input class="input" name="email" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left">
+                    <input class="input" name="password" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                    <button class="button is-success" type="submit">
+                        Login
+                    </button>
+                    </p>
+                </div>
             </div>
-            <div class="input__div">
-                <label class="label" for="senha"><b>Password</b></label>
-                <input class="input" type="password" placeholder="Senha" name="senha" required>
-            </div>
-            <input class="submit__button button is-primary is-light" type="submit" value="Login">
-        </div>
-    </form>
+        </form>
 </div>
 </body>
 
