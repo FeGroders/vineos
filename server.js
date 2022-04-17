@@ -31,18 +31,18 @@ app.post('/login', (req,res) => {
 				res.status(500).send(err.message);
 			} else {
 				if (result.rows.length > 0) {
-					res.status(200).send(result.rows);
+					res.sendFile('./pages/Admin.html', { root: path.join(__dirname, '/') });
 				} else {
-					res.status(404).send('Usuário não encontrado');
+					res.status(404).sendFile('./pages/login.html', { root: path.join(__dirname, '/') });
 				}
 			}
 		}
 	);
 })
 
-app.get('/insertVinho.html', (req, res) => { 
-	res.sendFile('pages/insertClient.html', { root: path.join(__dirname, '/')})   
-})
+// app.get('/insertVinho.html', (req, res) => { 
+// 	res.sendFile('pages/insertClient.html', { root: path.join(__dirname, '/')})   
+// })
 
 app.get('/vinhos', (req, res) => {
 	let results = [];
@@ -54,10 +54,10 @@ app.get('/vinhos', (req, res) => {
 	});
 });
 
-app.post('/inserir', (req, res) => {
+app.post('/insertVinho', (req, res) => {
 	console.log(req.body)  
 	cliente.query(
-		`insert into vinhos values(default,'${req.body.name}','${req.body.descricao}','${req.body.ano}', '${req.body.preco}');`,
+		`insert into vinhos values(default,'${req.body.name}','${req.body.descricao}','${req.body.ano}', '${req.body.preco}', '${btoa(req.body.imagem)}', '${req.body.disponivel}');`,
 		(err, result) => {
 			if (err) {
 				console.log(err);

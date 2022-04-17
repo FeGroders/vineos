@@ -24,7 +24,7 @@
                     </p>
                 </a>
 
-                <a role="button" class="navbar-burger mr-3" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <a role="button" class="navbar-burger mr-3" id="btn-homepage" aria-label="menu" aria-expanded="false" data-target="navbar-menu" href="./">
                     <span class="material-icons">
                         home
                     </span>
@@ -50,35 +50,23 @@
         </nav>
     </header>
 
-    <div class="container">
-        <div class="card__container"></div>
-    </div>
-
-    <div class="modal" id="modal_cart"> 
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Carrinho de Compras</p>
-                <button class="delete" id="button_close_cart" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="cart__container">
-                    
-                </div> 
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-warning" id="button_clear_cart">Limpar carrinho</button>
-            </footer>
-        </div>
-    </div>
-    
+    <div class="container is">
+        <button class="button" id="btn-vinhos">
+            <span class="icon">
+                <span class="material-icons">
+                    wine_bar
+                </span>
+            </span>
+            <span>Vinhos</span>
+          </button>
+    </div>   
 
     <footer class="footer">
         <div class="content has-text-centered">
             Developed by Fernando with ❤️
         </div>
     </footer>
-    <script src="/scripts/script.js"></script>
+    <script src="/scripts/admin.js"></script>
 </body>
 
 </html>
