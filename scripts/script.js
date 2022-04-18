@@ -1,3 +1,4 @@
+// var buffer = require('buffer/').Buffer;
 const table = document.querySelector('.card__container');
 const btnOpenCart = document.querySelector('#button_cart');
 const modalCart = document.querySelector('#modal_cart');
@@ -6,13 +7,12 @@ const modalCartBtnClearCart = document.querySelector('#button_clear_cart');
 const navbarBurger = document.querySelector('.navbar-burger')
 
 function loadWines(id, nome, descricao, ano, preco, imagem) {
-	console.log(id, nome, descricao, ano, preco, imagem);
 	let card = document.createElement('div');
 	card.classList.add('card');
 	card.innerHTML = `
             <div class="card-image">
                 <figure class="image is-4by3">
-                <img src="${atob(imagem)}" alt="Placeholder image">
+                <img src="${imagem}" alt="Placeholder image">
                 </figure>                
 			</div>
             <div class="card-content" value="${id}">
