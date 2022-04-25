@@ -6,18 +6,22 @@ const multer = require('multer');
 require('dotenv').config();
 var buffer = require('buffer').Buffer;
 const upload = multer({ dest: 'public/images/' });
-
 const PORT = 3000;
+
 const Client = require('pg').Client;
 let cliente = new Client({
-	user: 'postgres',
-	host: 'localhost',
-	database: 'postgres',
-	port: 5432,
-	password: 'postgres', 
-	});
+	user: process.env.DB_USERNAME,
+	host: process.env.DB_HOST,
+	database: process.env.DB_DATABASE,
+	port: process.env.DB_PORT,
+	password: process.env.DB_PASSWORD, 
 
+	ssl: {
+        rejectUnauthorized: false,
+    }
+});
 cliente.connect();
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded())
@@ -48,10 +52,8 @@ app.get('/vinhos', (req, res) => {
 	let results = [];
 	cliente.query('select * from vinhos where disponivel = true', (err, resp) => {
 		resp.rows.forEach((element) => {
-			//tratar imagem
 			let imagem = element.imagem;
 			let imagemBuffer = buffer.from(imagem, 'base64').toString('ascii');
-			console.log(imagemBuffer);
 
 			results.push({
 				id: element.id,
