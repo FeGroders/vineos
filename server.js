@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-let path = require('path')
+let path = require('path');
+const multer = require('multer');
 require('dotenv').config();
 var buffer = require('buffer').Buffer;
-const multer  = require('multer')
-const storage = multer.memoryStorage()
-const upload = multer({ storage: storage })
+const upload = multer({ dest: 'public/images/' });
+
 const PORT = 3000;
 const Client = require('pg').Client;
 let cliente = new Client({
@@ -35,7 +35,7 @@ app.post('/login', (req,res) => {
 				res.status(500).send(err.message);
 			} else {
 				if (result.rows.length > 0) {
-					res.sendFile('./pages/Admin.html', { root: path.join(__dirname, '/') });
+					res.sendFile('./pages/admin.html', { root: path.join(__dirname, '/') });
 				} else {
 					res.status(404).sendFile('./pages/login.html', { root: path.join(__dirname, '/') });
 				}
@@ -62,19 +62,15 @@ app.get('/vinhos', (req, res) => {
 				imagem: imagemBuffer,
 			});
 		});
-
-		// resp.rows.forEach((row) => {
-		// 	results.push(row);
-		// });
 		res.json(results);
 	});
 });
 
 app.post('/insertVinho', upload.single('imagem'), (req, res) => {
 	console.log('buffer', req.file.buffer);
-	console.log('conv', buffer.from(req.file.buffer).toString('base64'))
+	// console.log('conv', buffer.from(req.file.path).toString('base64'))
 	cliente.query(
-		`insert into vinhos values(default,'${req.body.nome}','${req.body.descricao}','${req.body.ano}', '${req.body.preco}', '${buffer.from(req.file.buffer).toString('base64')}', '${req.body.disponivel}');`,
+		`insert into vinhos values(default,'${req.body.nome}','${req.body.descricao}','${req.body.ano}', '${req.body.preco}', '${buffer.from(req.file.path).toString('base64')}', '${req.body.disponivel}');`,
 		(err, result) => { 
 			if (err) {
 				console.log(err);
