@@ -11,6 +11,8 @@ Esse projeto foi desenvolvido usando as seguintes tecnologias:
 ## 📘 Como utilizar
 Primeiramente você precisa criar o seu banco de dados, para isso você pode utilizar os comandos localizados no arquivo "./database.sql"
 
+Crie um arquivo .env com os dados de acesso ao seu database. Você pode utilizar o arquivo .env.example como base.
+
 Você precisará ter o [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) ou [Yarn](https://yarnpkg.com/) instalado no seu computador. No seu prompt de comando (CMD):
 
 ```bash
