@@ -6,6 +6,7 @@ Esse projeto foi desenvolvido usando as seguintes tecnologias:
 - [Javascript](https://www.javascript.com/)
 - [Bulma](https://bulma.io/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Multer](https://www.npmjs.com/package/multer)
 
 ## 📘 Como utilizar
 Primeiramente você precisa criar o seu banco de dados, para isso você pode utilizar os comandos localizados no arquivo "./database.sql"
