@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="javascript:history.back()">
+                <a class="navbar-item" href="/">
                     <p>
                         <span>
                             <wine_bar class="material-icons">wine_bar
@@ -30,8 +30,6 @@
                     </span>
                 </a>
             </div>
-
-            <!-- <a href="./pages/login.html"></a> -->
 
             <div id="navbar-menu" class="navbar-menu">
                 <div class="navbar-end">
@@ -51,7 +49,7 @@
     </header>
 
     <div class="container is">
-        <form class="form" action="/insertVinho" method="post">
+        <form class="form" action="/insertVinho" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <div class="field">
                     <div class="control">
@@ -90,7 +88,7 @@
                     <!-- <p class="control"> -->
                         <div class="file has-name is-fullwidth">
                             <label class="file-label">
-                            <input class="file-input" id="input-imagem" type="file" name="file" accept="image/*" required>
+                            <input class="file-input" id="input-imagem" type="file" name="imagem" accept="image/*" required>
                             <span class="file-cta">
                                 <span class="file-icon">
                                 <i class="fas fa-upload"></i>
