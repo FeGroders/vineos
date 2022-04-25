@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
@@ -31,8 +31,6 @@
                 </a>
             </div>
 
-            <!-- <a href="./pages/login.html"></a> -->
-
             <div id="navbar-menu" class="navbar-menu">
                 <div class="navbar-end">
                     <div class="navbar-item">
@@ -48,41 +46,49 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header> -->
 
-    <div class="container">
-        <form class="form" action="/login" method="post">
+    <div class="hero is-fullheight">
+        <div class="hero-body">
             <div class="container">
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" name="email" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                            <span class="material-icons">
-                                email
-                            </span>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" name="password" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                            <span class="material-icons">
-                                key
-                            </span>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control">
-                    <button class="button is-success" type="submit">
-                        Login
-                    </button>
-                    </p>
+                <div class="columns is-centered">
+                    <div class="column is-4">
+                        <form class="form" action="/login" method="post" class="box">
+                            <div class="container">
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input" name="email" type="email" placeholder="Email">
+                                        <span class="icon is-small is-left">
+                                            <span class="material-icons">
+                                                email
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input" name="password" type="password" placeholder="Password">
+                                        <span class="icon is-small is-left">
+                                            <span class="material-icons">
+                                                key
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control">
+                                    <button class="button" type="submit">
+                                        Login
+                                    </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </form>
-</div>
+        </div>
+    </div>
 </body>
 
 </html>
