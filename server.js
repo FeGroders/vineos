@@ -69,8 +69,6 @@ app.get('/vinhos', (req, res) => {
 });
 
 app.post('/insertVinho', upload.single('imagem'), (req, res) => {
-	console.log('buffer', req.file.buffer);
-	// console.log('conv', buffer.from(req.file.path).toString('base64'))
 	cliente.query(
 		`insert into vinhos values(default,'${req.body.nome}','${req.body.descricao}','${req.body.ano}', '${req.body.preco}', '${buffer.from(req.file.path).toString('base64')}', '${req.body.disponivel}');`,
 		(err, result) => { 
